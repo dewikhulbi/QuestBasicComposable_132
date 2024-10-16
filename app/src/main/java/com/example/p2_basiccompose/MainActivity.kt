@@ -50,3 +50,4 @@ fun BasicLayout(modifier: Modifier = Modifier) {
 
         Text(text = "Nama", style = TextStyle(fontSize = 40.sp),
             modifier = Modifier.padding(top=20.dp))
+        Text(text = "Dewi Khulbi Utami",
