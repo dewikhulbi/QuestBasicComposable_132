@@ -26,12 +26,9 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            P2_BasicComposeTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    BasicLayout(modifier = Modifier.padding(innerPadding))
-                }
+
             }
         }
     }
 
-
+}
