@@ -62,3 +62,5 @@ fun BasicLayout(modifier: Modifier = Modifier) {
 
 }
 
+@Preview(showBackground = true)
+
