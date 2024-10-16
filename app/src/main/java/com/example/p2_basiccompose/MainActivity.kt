@@ -21,4 +21,51 @@ import androidx.compose.ui.unit.dp
 import com.example.p2_basiccompose.ui.theme.P2_BasicComposeTheme
 
 
+class MainActivity : ComponentActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        enableEdgeToEdge()
+        setContent { P2_BasicComposeTheme {
+            Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
+                BasicLayout(modifier = Modifier.padding(innerPadding))
+            }
+        }
+        }
+    }
 
+}
+@Composable
+fun BasicLayout(modifier: Modifier = Modifier) {
+    Column(
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.Center,
+        modifier = Modifier.fillMaxSize()
+    ){
+        Text(text = "Login", style = TextStyle(fontSize = 50.sp,
+            fontWeight = FontWeight.Bold ))
+        Text(text = "Ini adalah halaman login")
+        Image(painter = painterResource(id = R.drawable.kucing), contentDescription = null,
+            modifier = Modifier.padding(top = 20.dp).size(200.dp)
+        )
+
+        Text(text = "Nama", style = TextStyle(fontSize = 40.sp),
+            modifier = Modifier.padding(top=20.dp))
+        Text(text = "Dewi Khulbi Utami",color = Color.Red,
+            style = TextStyle(fontSize = 20.sp, fontWeight = FontWeight.Bold),
+        )
+        Text(text = "20220140132",
+            style = TextStyle(fontSize = 50.sp, fontWeight = FontWeight.Bold),
+            modifier = Modifier.padding(top=20.dp))
+        Image(painter = painterResource(id = R.drawable.aku), contentDescription = null,
+            modifier = Modifier.padding(top = 40.dp).size(300.dp))
+    }
+
+}
+
+@Preview(showBackground = true)
+@Composable
+fun GreetingPreview() {
+    P2_BasicComposeTheme {
+        BasicLayout()
+    }
+}
