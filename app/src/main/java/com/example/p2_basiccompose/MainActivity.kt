@@ -45,3 +45,6 @@ fun BasicLayout(modifier: Modifier = Modifier) {
             fontWeight = FontWeight.Bold ))
         Text(text = "Ini adalah halaman login")
         Image(painter = painterResource(id = R.drawable.kucing), contentDescription = null,
+            modifier = Modifier.padding(top = 20.dp).size(200.dp)
+        )
+
